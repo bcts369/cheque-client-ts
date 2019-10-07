@@ -1,5 +1,7 @@
 # Cheque REST API Spec
 
+※途中。
+
 `cosmos-client-ts`に依存。
 
 ```Shell
@@ -32,7 +34,7 @@ $ npm i --save cosmos-client-ts
 
 `StdTx`@`cosmos-client-ts`
 
-## Mint
+## MintToken
 
 `POST` `/mint`
 
@@ -40,7 +42,7 @@ $ npm i --save cosmos-client-ts
 
 `StdTx`@`cosmos-client-ts`
 
-## burn
+## BurnToken
 `POST` `/burn`
 
 ### Response
