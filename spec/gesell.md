@@ -8,7 +8,7 @@ $ npm i --save cosmos-client-ts
 
 ## GetOwner
 
-`GET` `gesell/denom-prefixes/{denom-prefix}/owner`
+`GET` `/gesell/denom-prefixes/{denom-prefix}/owner`
 
 ### Response
 
@@ -21,7 +21,7 @@ interface QueryResOwner {
 
 ## SetOwner
 
-`PUT` `GET` `gesell/denom-prefixes/{denom-prefix}/owner`
+`PUT` `GET` `/gesell/denom-prefixes/{denom-prefix}/owner`
 
 ### Request
 
@@ -39,7 +39,7 @@ interface SetOwnerReq {
 
 ## SetAutoSell
 
-`PUT` `gesell/denom-prefixes/{denom-prefix}/auto-sell`
+`PUT` `/gesell/denom-prefixes/{denom-prefix}/auto-sell`
 
 ### Request
 
@@ -57,7 +57,7 @@ interface UnsetAutoSellReq {
 
 ## UnsetAutoSell
 
-`DELETE` `gesell/denom-prefixes/{denom-prefix}/auto-sell`
+`DELETE` `/gesell/denom-prefixes/{denom-prefix}/auto-sell`
 
 ### Request
 
@@ -74,7 +74,7 @@ interface UnsetAutoSellReq {
 
 ## MintToken
 
-`POST` `gesell/denom-prefixes/{denom-prefix}/mint`
+`POST` `/gesell/denom-prefixes/{denom-prefix}/mint`
 
 ### Request
 
@@ -94,7 +94,7 @@ interface MintTokenReq {
 
 ## BuyToken
 
-`POST` `/buy`
+`POST` `/gesell/denom-prefixes/{denom-prefix}/buy`
 
 ### Request
 
