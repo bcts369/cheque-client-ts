@@ -27,5 +27,8 @@
     "karma-jasmine": "^2.0.1",
     "karma-typescript-preprocessor": "^0.4.0",
     "typescript": "^3.6.3"
+  },
+  "dependencies": {
+    "cosmos-client-ts": "^0.1.5"
   }
 }
