@@ -1,6 +1,4 @@
-# Cheque REST API Spec
-
-※途中。
+# Securities REST API Spec
 
 `cosmos-client-ts`に依存。
 
@@ -9,7 +7,8 @@ $ npm i --save cosmos-client-ts
 ```
 
 ## GetOwner
-`GET` `/owner`
+
+`GET` `/securities/owner`
 
 ### Response
 
@@ -19,12 +18,13 @@ $ npm i --save cosmos-client-ts
 
 ## SetOwner
 
-`PUT` `/owner`
+`PUT` `/securities/owner`
 
 ### Request
 
 ```TypeScript
-{
+interface SetOwnerEq {
+  base_req: BaseReq; // cosmos-client-ts
   owner: string;
   new_owner: string;
 }
@@ -36,14 +36,35 @@ $ npm i --save cosmos-client-ts
 
 ## MintToken
 
-`POST` `/mint`
+`POST` `/securities/mint`
+
+### Request
+
+```TypeScript
+interface MintTokenReq {
+  base_req: BaseReq; // cosmos-client-ts
+  to_address: string;
+  amount: Coin[]; // cosmos-client-ts
+}
+```
 
 ### Response
 
 `StdTx`@`cosmos-client-ts`
 
 ## BurnToken
-`POST` `/burn`
+
+`POST` `/securities/burn`
+
+### Request
+
+```TypeScript
+interface BurnTokenReq {
+  base_req: BaseReq; // cosmos-client-ts
+  from_address: string;
+  amount: Coin[]; // cosmos-client-ts
+}
+```
 
 ### Response
 
