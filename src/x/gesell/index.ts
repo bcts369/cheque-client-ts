@@ -8,24 +8,7 @@ import { BuyTokenReq } from "./types/buy-token-rew";
 
 export module Gesell {
 
-    /*    
-    
-    ## GetOwner
-    
-    `GET` `/gesell/denom-prefixes/{denom-prefix}/owner`
-    
-    ### Response
-    
-    ```TypeScript
-    interface QueryResOwner {
-      owner: string;
-      auto_sell?: AutoSell;
-    }
-    ```
-    TODO: 仕様を確認して、調整する
-    */
-    export function getOwner(sdk: CosmosSDK, denomPrefix: string): QueryResOwner {
-        // return sdk.get(`/trust/scores/${address}`, { 'topic-ids': topicIDs.join(',') })
+    export function getOwner(sdk: CosmosSDK, denomPrefix: string) {
         const path = `/gesell/denom-prefixes/${denomPrefix}/owner`;
         return sdk.get<QueryResOwner>(path, null);
     }
