@@ -2,9 +2,10 @@ import { CosmosSDK } from "cosmos-client-ts";
 import { StdTx } from "cosmos-client-ts/lib/x/auth/types/std-tx";
 import { QueryResOwner } from "./types/query-res-owner"
 import { SetOwnerReq } from "./types/set-owner-req";
+import { SetAutoSellReq } from "./types/set-auto-sell-req";
 import { UnsetAutoSellReq } from "./types/unset-auto-sell-req";
 import { MintTokenReq } from "./types/mint-token-req";
-import { BuyTokenReq } from "./types/buy-token-rew";
+import { BuyTokenReq } from "./types/buy-token-req";
 
 export module Gesell {
 
@@ -19,7 +20,7 @@ export module Gesell {
     }
 
     // TODO: 仕様を確認して、調整する
-    export function setAutoSell(sdk: CosmosSDK, denomPrefix: string, params: UnsetAutoSellReq) {
+    export function setAutoSell(sdk: CosmosSDK, denomPrefix: string, params: SetAutoSellReq) {
         const path = `/gesell/denom-prefixes/${denomPrefix}/auto-sell`;
         return sdk.put<StdTx>(path, params);
     }
