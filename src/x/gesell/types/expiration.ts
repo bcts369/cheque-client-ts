@@ -1,5 +1,5 @@
 export interface Expiration {
-  year: number;
-  month: number;
-  day: number;
+  year: string;
+  month: string;
+  day: string;
 }

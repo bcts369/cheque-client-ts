@@ -1,5 +1,5 @@
 export interface AutoSell {
-  price1000: number;
+  price1000: string;
   iso4217: string;
   real_name: string;
   real_address: string;
