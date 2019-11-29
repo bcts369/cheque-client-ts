@@ -16,28 +16,28 @@ export module Gesell {
 
     export function setOwner(sdk: CosmosSDK, denomPrefix: string, params: SetOwnerReq) {
         const path = `/gesell/denom-prefixes/${denomPrefix}/owner`;
-        return sdk.put<StdTx>(path, params);
+        return sdk.put<StdTx>(path, JSON.stringify(params));
     }
 
     // TODO: 仕様を確認して、調整する
     export function setAutoSell(sdk: CosmosSDK, denomPrefix: string, params: SetAutoSellReq) {
         const path = `/gesell/denom-prefixes/${denomPrefix}/auto-sell`;
-        return sdk.put<StdTx>(path, params);
+        return sdk.put<StdTx>(path, JSON.stringify(params));
     }
 
     // TODO: 仕様を確認して、調整する
     export function unsetAutoSell(sdk: CosmosSDK, denomPrefix: string, params: UnsetAutoSellReq) {
         const path = `/gesell/denom-prefixes/${denomPrefix}/auto-sell`;
-        return sdk.delete<StdTx>(path, params);
+        return sdk.delete<StdTx>(path, JSON.stringify(params));
     }
 
     export function mintToken(sdk: CosmosSDK, denomPrefix: string, params: MintTokenReq) {
         const path = `/gesell/denom-prefixes/${denomPrefix}/mint`;
-        return sdk.post<StdTx>(path, params);
+        return sdk.post<StdTx>(path, JSON.stringify(params));
     }
 
     export function buyToken(sdk: CosmosSDK, denomPrefix: string, params: BuyTokenReq) {
         const path = `/gesell/denom-prefixes/${denomPrefix}/buy`;
-        return sdk.post<StdTx>(path, params);
+        return sdk.post<StdTx>(path, JSON.stringify(params));
     }
 }
